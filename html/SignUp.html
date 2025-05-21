@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/SignUp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div class="logo"><a href="home.html" style="text-decoration: none; font-size: 24px;">🌐 Fintrack</a></div>
+    <!-- <div class="logo">
+        <img src="../Assets/icons/logo.png" alt="Logo">
+    </div> -->
+
+    <form id="productForm" onsubmit="handleSubmit(event)">
+        <h2>Create Free Account</h2>
+        <p>Sign Up Using Social Networks</p>
+        <div class="social-login">
+            <a href="https://accounts.google.com/v3/signin/accountchooser?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ec=asw-gmail-globalnav-signin&flowEntry=AccountChooser&flowName=GlifWebSignIn&service=mail&dsh=S924225261%3A1746487981601782"
+                class="google"><img src="../Assets/icons/icons8-google-48.png" alt="Google"></a>
+            <a href="https://www.facebook.com/" class="facebook"><img src="../Assets/icons/icons8-facebook-48.png"
+                    alt="Facebook"></a>
+            <a href="https://x.com/i/flow/login?lang=en" class="twitter"><img
+                    src="../Assets/icons/icons8-twitter-50.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en" class="instagram"><img
+                    src="../Assets/icons/icons8-instagram-48.png" alt="Instagram"></a>
+
+        </div><br>
+        <div class="line-container">
+            <hr class="line">
+            <span class="or-text">OR</span>
+            <hr class="line">
+        </div>
+        <div class="logo1">
+            <a href="home.html"><img src="../Assets/icons/icons8-x-48.png" alt="Logo"></a>
+        </div>
+
+        <div class="input-grid">
+            <div>
+                <input type="text" placeholder="Name" id="username" name="name" required>
+            </div>
+            <div>
+                <input type="tel" placeholder="Mobile No." id="mobile" name="mobile" required>
+            </div>
+            <div>
+                <input type="email" placeholder="Email" id="email" name="email" required>
+            </div>
+            <div class="password-wrapper">
+                <input type="password" placeholder="Password" id="password" name="password" required>
+                <!-- <span class="toggle-password" onclick="togglePassword()">🙈</span> -->
+                <span class="toggle-password" onclick="togglePassword()">
+                    <i id="eyeIcon" class="fas fa-eye-slash"></i>
+                </span>
+            </div>
+
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the <a href="Terms.html" target="_blank">Terms and Conditions</a></label>
+        </div>
+
+        <input type="submit" value="Sign Up">
+
+        <div class="register-container">
+            <a href="SignIn.html">Already have an account? Sign In</a>
+        </div>
+    </form>
+
+    <script src="../js/SignUp.js"></script>
+</body>
+
+</html>

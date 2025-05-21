@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Standard favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo"><a href="home.html" style="text-decoration: none;">🌐 Fintrack</a></div>
+      <nav class="nav-links">
+        <div class="dropdown">Platform ▾</div>
+        <div class="dropdown">Solutions ▾</div>
+        <div class="dropdown">Resources ▾</div>
+        <a href="#">Enterprise</a>
+        <a href="#">Pricing</a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <a href="SignIn.html" class="btn">Sign In</a>
+      <a href="SignUp.html" class="btn">Get started — it’s free</a>
+    </div>
+  </header>
+  <div class="hero">
+    <h1>
+      <span>Track stocks, stay informed with </span><br>
+      <span>real-time news and invest smarter with Fintrack.</span>
+    </h1>
+    <p>Effortlessly search for stocks, get real-time market updates, and stay ahead with the latest financial news — all
+      in one place.</p>
+  </div>
+  <div class="cta">
+    <a href="SignUp.html" class="btn1">Get started — it’s free</a>
+    <a href="#" class="btn1" id="viewLiveMarketsBtn">View Live Markets</a>
+  </div>
+
+
+
+  <div class="text1">
+    <p>Explore our features and benefits</p>
+  </div>
+
+
+  <section class="features-section">
+    <div class="feature">
+      <div class="icon">📊</div>
+      <h3>Real-Time Stock Tracking</h3>
+      <p>Monitor live stock prices, volume, and performance with up-to-the-second data from global markets — all in one
+        dashboard.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">📰</div>
+      <h3>Financial News Integration</h3>
+      <p>Stay ahead with breaking financial news and insights. Get curated articles, analyst reports, and market-moving
+        headlines.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">📈</div>
+      <h3>Smart Analytics & Alerts</h3>
+      <p>Identify trends, track your portfolio performance, and set custom alerts for price changes and market news —
+        all in real-time.</p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">🔗</div>
+      <h3>Seamless API & Sync</h3>
+      <p>Connect with brokerage accounts and sync your watchlist. Use our API to integrate Fintrack data into your own
+        apps and tools.</p>
+    </div>
+  </section>
+
+
+  <section class="news-section">
+    <div class="news-section-inner">
+        <h2>Market News</h2>
+        <div class="market-selector">
+            <button class="market-btn active" data-market="general">Global</button>
+            <button class="market-btn" data-market="forex">US</button>
+            <button class="market-btn" data-market="crypto"><i class="fa-brands fa-bitcoin"></i> Crypto</button>
+        </div>
+        <div class="news-container" id="newsContainer">
+            <!-- News will be populated here -->
+        </div>
+    </div>
+</section>
+
+
+
+  <section class="scroll-gallery-wrapper">
+    <button class="scroll-btn left">&#10094;</button> <!-- Left arrow -->
+
+    <div class="scroll-gallery" id="scrollGallery">
+      <div class="card">
+        <img src="../Assets/images/7f81b45c062da2625af2bbd43b3ddfaa.jpeg" alt="Image 1">
+        <p>@WaltherCrypto</p>
+      </div>
+      <div class="card">
+        <img src="../Assets/images/b0ca248a5b505eb12b04eb9234bad559.jpeg" alt="Image 2">
+        <p>@kubetson</p>
+      </div>
+      <div class="card">
+        <img src="../Assets/images/b40e6f9452769e780ac0d127a69429ed.jpeg" alt="Image 3">
+        <p>@Fintrack</p>
+      </div>
+      <div class="card">
+        <img src="../Assets/images/bb0f0df0ebe069eb51d0f50409827d9f.jpg" alt="Image 4">
+        <p>@lifestylewith_ashley26</p>
+      </div>
+      <div class="card">
+        <img src="../Assets/images/BiyTfrNgeW0.jpg" alt="Image 3">
+        <p>@Fintrack</p>
+      </div>
+      <div class="card">
+        <img src="../Assets/images/BjBUBwNgE-x.jpg" alt="Image 4">
+        <p>@Fintrack</p>
+      </div>
+      <div class="card">
+        <img src="../Assets/images/BjSOUSEA5mB.jpg" alt="Image 4">
+        <p>@Fintrack</p>
+      </div>
+      <div class="card">
+        <img src="../Assets/images/BtD3G1JAn6S.jpg" alt="Image 4">
+        <p>@Fintrack</p>
+      </div>
+      <div class="card">
+        <img src="../Assets/images/BuPgi4KnhHz.jpg" alt="Image 4">
+        <p>@lifestyley</p>
+      </div>
+      <div class="card">
+        <img src="../Assets/images/dbf97c7448bcd8198412deaa61b6b678.jpg" alt="Image 4">
+        <p>@Fintrack</p>
+      </div>
+
+    </div>
+
+    <button class="scroll-btn right">&#10095;</button> <!-- Right arrow -->
+  </section>
+
+  <section class="markets-nav">
+    <div class="markets-nav-inner">
+      <a href="#" class="nav-item">PRE-MKT</a>
+      <a href="#" class="nav-item">US</a>
+      <a href="#" class="nav-item">EUR</a>
+      <a href="#" class="nav-item">CHINA</a>
+      <a href="#" class="nav-item">ASIA</a>
+      <a href="#" class="nav-item">WORLD</a>
+      <a href="#" class="nav-item">FX</a>
+      <a href="#" class="nav-item">CRYPTOCURRENCY</a>
+      <a href="#" class="nav-item">COMMODITIES</a>
+      <a href="#" class="nav-item">BONDS</a>
+      <a href="#" class="nav-item">ETF MARKETS</a>
+      <a href="#" class="nav-item">CNBC NEXT 50</a>
+    </div>
+  </section>
+
+  <section class="major-indexes">
+    <div class="major-indexes-inner">
+      <h2>MAJOR INDEXES</h2>
+
+      <div class="indexes-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Last</th>
+              <th>Change</th>
+              <th>% Change</th>
+            </tr>
+          </thead>
+          <tbody id="indexesTableBody">
+          </tbody>
+
+        </table>
+        <div id="lastUpdated"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h2><a href="home.html" style="text-decoration: none; color: #551a8b;">🌐 Fintrack</a></h2><br>
+        <p>Your money. Clearly tracked.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-reddit"></i></a>
+          <a href="#"><i class="fab fa-discord"></i></a>
+        </div>
+        <div class="language-select">
+          🌍 <select>
+            <option>English</option>
+            <option>Deutsch</option>
+            <option>Français</option>
+            <option>Español</option>
+            <option>हिन्दी</option>
+            <option>العربية</option>
+            <option>Русский</option>
+            <option>Português</option>
+            <!-- Add more -->
+          </select>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>Screeners</h4>
+          <a href="#">Stocks</a>
+          <a href="#">ETFs</a>
+          <a href="#">Bonds</a>
+          <a href="#">Crypto coins</a>
+        </div>
+        <div>
+          <h4>Tools</h4>
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Market data</a>
+        </div>
+        <div>
+          <h4>Community</h4>
+          <a href="#">Social network</a>
+          <a href="#">Refer a friend</a>
+          <a href="#">Moderators</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">Who we are</a>
+          <a href="#">Careers</a>
+          <a href="#">Blog</a>
+        </div>
+        <div>
+          <h4>Business</h4>
+          <a href="#">Widgets</a>
+          <a href="#">Charting solutions</a>
+          <a href="#">Trading Platform</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Fintrack</p>
+      <p>Market data from <a href="https://finnhub.io/" target="_blank">Finnhub.io</a>.</p>
+    </div>
+  </footer>
+
+
+  <script src="../js/home.js"></script>
+
+</body>
+
+</html>

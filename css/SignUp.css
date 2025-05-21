@@ -1,0 +1,182 @@
+.logo1 {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+}
+
+.logo1 img {
+    width: 50px; /* Adjust as needed */
+    height: 40px;
+}
+
+.register-container a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #551a8b;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.register-container{
+    text-align: center;
+    margin-top: 12px;
+}
+
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px; /* space for the icon */
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    color: #555;
+}
+
+
+.checkbox-container{
+    text-align: center;
+    margin-bottom: 25px;
+    
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px 5px;                 
+    margin: 20px 0;
+    margin-left: 20px;
+}
+
+.input-grid input {
+    width: 100%;       
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.line-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.line {
+    border: none;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    margin: 0 10px;
+}
+
+.or-text {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+.social-login a {
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center;     
+}
+
+
+#productForm h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+#productForm p {
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 100px; /* Adjust as needed */
+    height: 50px;
+}
+
+
+body {
+    /* background-image: url(../Assets/images/mymind-XUlsF9LYeVk-unsplash.jpg); */
+    background: #f1f5fe;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#productForm {
+    /* background-color: rgba(255, 255, 255, 0.9); Semi-transparent white */
+    background: #cfddfa;
+    backdrop-filter: blur(5px); /* Adds blur behind the form */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    background-color: #551a8b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 20px;
+}
+
+/* input[type="submit"]:hover {
+    background-color: lightsalmon;
+} */

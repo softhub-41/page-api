@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Letter-by-Letter Typing Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', monospace;
+            background-color: #f0f0f0;
+        }
+
+        .title-container {
+            overflow: hidden;
+            display: inline-block;
+            position: relative;
+            padding: 0 10px;
+        }
+
+        .letter {
+            font-size: 4vw; /* Responsive font size */
+            color: #333;
+            margin: 0;
+            display: inline-block;
+            transform: translateX(-100%);
+            opacity: 0;
+            font-weight: bold;
+            letter-spacing: -0.5px; /* Decrease space between letters */
+        }
+
+        .letter.animate {
+            animation: slideIn 0.03s ease-in-out forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .cursor {
+            position: absolute;
+            font-size: 4vw; /* Responsive font size */
+            color: #333;
+            font-weight: bold;
+            animation: blink 1s step-end infinite;
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .space {
+            display: inline-block;
+            width: 5px; /* Decreased space width */
+        }
+
+        /* Responsive breakpoints */
+        @media screen and (max-width: 768px) {
+            .letter {
+                font-size: 6vw;
+            }
+            .cursor {
+                font-size: 6vw;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .letter {
+                font-size: 8vw;
+            }
+            .cursor {
+                font-size: 8vw;
+            }
+            .space {
+                width: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <span class="letter">W</span>
+        <span class="letter">e</span>
+        <span class="letter">l</span>
+        <span class="letter">c</span>
+        <span class="letter">o</span>
+        <span class="letter">m</span>
+        <span class="letter">e</span>
+        <span class="space"></span>
+        <span class="letter">t</span>
+        <span class="letter">o</span>
+        <span class="space"></span>
+        <span class="letter">M</span>
+        <span class="letter">y</span>
+        <span class="space"></span>
+        <span class="letter">W</span>
+        <span class="letter">e</span>
+        <span class="letter">b</span>
+        <span class="letter">s</span>
+        <span class="letter">i</span>
+        <span class="letter">t</span>
+        <span class="letter">e</span>
+        <span class="cursor">_</span>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const letters = document.querySelectorAll('.letter');
+            const cursor = document.querySelector('.cursor');
+            let currentIndex = 0;
+            let cursorPosition = 0;
+
+            function typeNextLetter() {
+                if (currentIndex < letters.length) {
+                    const letter = letters[currentIndex];
+                    letter.classList.add('animate');
+                    letter.addEventListener('animationend', () => {
+                        cursorPosition += letter.offsetWidth - 1; // Use actual letter width
+                        if (currentIndex === 6 || currentIndex === 9 || currentIndex === 11) {
+                            cursorPosition += 5; // Adjusted space width
+                        }
+                        cursor.style.left = `${cursorPosition}px`;
+                        currentIndex++;
+                        setTimeout(typeNextLetter, 10);
+                    }, { once: true });
+                }
+            }
+
+            typeNextLetter();
+        });
+    </script>
+</body>
+</html>
